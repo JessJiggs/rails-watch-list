@@ -1,0 +1,9 @@
+<%= simple_form_for [@list, @bookmark] do |t| %>
+<%# bookmark is in the partial here so dont need @bookmark %>
+  <%= t.association :movie %>
+  <%= t.input :comment %>
+  <%= t.button :submit %>
+<% end %>
+
+<%# bookmark: what ever word you put (as part of parial) - is the part that goes where simpleform is see (_form) %>
+<%# @list here = empty template that going to be populated by form %>

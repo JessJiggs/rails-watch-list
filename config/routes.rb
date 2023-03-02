@@ -2,15 +2,16 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 # resources user-movies
 # - index & show
-# - create & new
+
 #   resources movie-list
-#     - index
-#     - bookmark
+#     - index & show
+#     - bookmark create
 #     - destroy a bookmark
 
-#     resources :movies, only: [:index, :show] do
-#       resources :bookmark, only: [:index, :new, :create]
-#     end
+    resources :lists, only: [:index, :show, :new, :create] do
+      resources :bookmarks, only: [:new, :create]
+    end
+    delete "bookmark", to: "bookmarks#destroy"
 
   # Defines the root path route ("/")
   # root "articles#index"
