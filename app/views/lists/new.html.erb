@@ -1,4 +1,9 @@
-<%= render "form", list: @list %>
+
+<%= form_with model: list do |t| %>
+  <%= t.label :name %>
+  <%= t.text_field :name %>
+  <%= t.submit %>
+<% end %>
 
 
 <%# @list here = empty template that going to be populated by form %>

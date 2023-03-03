@@ -1,6 +1,13 @@
 <h2><%= @list.name %></h2>
 
 <br><p>******</p>
+<h2> My bookmarks on this list: </h2>
+<% @list.bookmarks.each do |bookmark| %>
+<%= bookmark.movie.title %>
+<%= bookmark.comment %>
+<br>
+
+<% end %>
 
 <%= link_to "Add a movie to list", new_list_bookmark_path(@list)%>
 <br>

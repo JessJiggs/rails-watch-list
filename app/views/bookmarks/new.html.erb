@@ -2,8 +2,12 @@
 <%# bookmark is in the partial here so dont need @bookmark %>
   <%= t.association :movie %>
   <%= t.input :comment %>
-  <%= t.button :submit %>
+  <%= t.submit %>
 <% end %>
 
 <%# bookmark: what ever word you put (as part of parial) - is the part that goes where simpleform is see (_form) %>
 <%# @list here = empty template that going to be populated by form %>
+<%# you dont see create file - you link to new file- bec create action does work - you see new.  %>
+<br>
+
+<%= link_to "Home", lists_path%>
